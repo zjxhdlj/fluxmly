@@ -1,14 +1,23 @@
 # fluxmly
 
-A new Flutter plugin.
+Flutter 喜马拉雅插件。
+因为项目需要使用喜马拉雅SDK，故开发此插件
 
-## Getting Started
+Android & IOS 通用
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+目前实现功能:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+[✅] 初始化SDK
+
+[✅] 获取猜你喜欢列表
+
+[✅] 获取专辑信息
+
+[✅] 初始化播放器
+
+[✅] 播放器控制
+
+[✅] 播放器回调
+
+
+其他功能暂无使用，故没有开发，不过都差不多，举一反三也能完成
