@@ -30,8 +30,8 @@ class _MyAppState extends State<MyApp> {
   }
 
   initPlatformState() async {
-    final res=await Fluxmly.init("bd884e3a45ba95f04d1ce107746bf038",
-        "f41f7494374ae28a36311a53049d943c", "com.virus.fluxmly_example");
+    final res=await Fluxmly.init("APPKEY",
+        "APPSECRET", "PACKID");
 
   }
 
