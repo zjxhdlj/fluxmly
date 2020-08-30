@@ -1,0 +1,61 @@
+group 'com.virus.fluxmly'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies{
+    if(findProject(":Downloader")) {
+        api files('libs/xutil3.3.6.jar')
+        api project(':Downloader')
+        api project(':OAuth2_Android_SDK:XmPayOrderSDK')
+        api project(':TingPhoneOpenSDK')
+        api project(':OpenSDKAdModel')
+    } else{
+        api fileTree(dir: 'libs', include: '*.jar')
+    }
+
+    api 'com.google.code.gson:gson:2.8.1'
+    api 'com.squareup.okhttp3:okhttp:3.11.0'
+    api 'com.squareup.okio:okio:1.15.0'
+    api 'com.android.support:support-v4:28.0.0'
+}
