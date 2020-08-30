@@ -25,9 +25,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   initPlatformState() async {
-    final res=await Fluxmly.init("APPKEY",
-        "APPSECRET", "PACKID");
-
+    final res = await Fluxmly.init("APPKEY", "APPSECRET", "PACKID");
   }
 
   @override
