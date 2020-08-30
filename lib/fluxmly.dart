@@ -16,7 +16,6 @@ enum PlayMode {
 
 class Fluxmly {
   static final MethodChannel _channel = const MethodChannel('fluxmly');
-  StreamSubscription<dynamic> _streamSubscription;
   TimeChangeHandler durationHandler;
   TimeChangeHandler positionHandler;
   StringChangeHandler playerHandler;

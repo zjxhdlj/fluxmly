@@ -1,9 +1,6 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'dart:async';
 import 'package:fluxmly/fluxmly.dart';
 import 'package:fluxmly_example/home_page.dart';
-import 'package:fluxmly_example/list.dart';
 import 'package:fluxmly_example/routes.dart';
 
 void main() {
@@ -16,10 +13,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _data = "";
   String title = "demo";
   List tracksList;
-  var _futureBuilder;
   int page = 1;
 
   @override
