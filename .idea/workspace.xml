@@ -4,7 +4,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="609fd88b-f340-4b78-a252-94ab1df507dd" name="Default Changelist" comment="" />
+    <list default="true" id="609fd88b-f340-4b78-a252-94ab1df507dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +21,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1g5dnQSmtzXaLuyBYH1XApG8y1F" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,7 +34,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -97,11 +103,11 @@
     <state width="1221" height="227" key="GridCell.Tab.0.right/0.23.1680.973@0.23.1680.973" timestamp="1598678483369" />
     <state width="1175" height="228" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1598593795370" />
     <state width="1175" height="228" key="GridCell.Tab.0.right/0.23.1680.975@0.23.1680.975" timestamp="1598593321609" />
-    <state x="243" y="92" key="SettingsEditor" timestamp="1598678175911">
-      <screen x="0" y="23" width="1680" height="972" />
+    <state x="243" y="92" key="SettingsEditor" timestamp="1598772476946">
+      <screen x="0" y="23" width="1680" height="967" />
     </state>
-    <state x="243" y="92" key="SettingsEditor/0.23.1680.966@0.23.1680.966" timestamp="1597463811322" />
-    <state x="243" y="92" key="SettingsEditor/0.23.1680.967@0.23.1680.967" timestamp="1598676942650" />
+    <state x="243" y="92" key="SettingsEditor/0.23.1680.966@0.23.1680.966" timestamp="1598771499493" />
+    <state x="243" y="92" key="SettingsEditor/0.23.1680.967@0.23.1680.967" timestamp="1598772476946" />
     <state x="243" y="92" key="SettingsEditor/0.23.1680.972@0.23.1680.972" timestamp="1598678175911" />
     <state x="568" y="317" key="com.intellij.ide.util.TipDialog" timestamp="1597745770128">
       <screen x="0" y="23" width="1680" height="966" />
