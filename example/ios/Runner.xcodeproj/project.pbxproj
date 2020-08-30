@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
-		56CA1AC224F21F3500B0EB93 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA1AC124F21F3500B0EB93 /* SystemConfiguration.framework */; };
-		56CA1AC424F21F4200B0EB93 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA1AC324F21F4200B0EB93 /* CoreTelephony.framework */; };
-		56CA1AC624F21F8100B0EB93 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA1AC524F21F8100B0EB93 /* libz.tbd */; };
-		56CA1B0C24F2390300B0EB93 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA1B0B24F2390300B0EB93 /* libz.1.tbd */; };
-		56CA1C3124F2503F00B0EB93 /* libXMOpenPlatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA1C3024F2503F00B0EB93 /* libXMOpenPlatform.a */; };
 		75C695E0F5256B5C0B5B12A8 /* libPods-Runner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C358695B6FB232C38DB89862 /* libPods-Runner.a */; };
 		978B8F6F1D3862AE00F588F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFD8EE1D35381100E5BB4D /* AppDelegate.m */; };
 		97C146F31CF9000F007C117D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C146F21CF9000F007C117D /* main.m */; };
@@ -66,11 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56CA1B0C24F2390300B0EB93 /* libz.1.tbd in Frameworks */,
-				56CA1AC624F21F8100B0EB93 /* libz.tbd in Frameworks */,
-				56CA1AC424F21F4200B0EB93 /* CoreTelephony.framework in Frameworks */,
-				56CA1C3124F2503F00B0EB93 /* libXMOpenPlatform.a in Frameworks */,
-				56CA1AC224F21F3500B0EB93 /* SystemConfiguration.framework in Frameworks */,
 				75C695E0F5256B5C0B5B12A8 /* libPods-Runner.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,9 +35,8 @@ __weak FluxmlyPlugin* __fluxmlyPlagin;
     result([@"iOS " stringByAppendingString:[[UIDevice currentDevice] systemVersion]]);
   }else if([@"init" isEqualToString:call.method]){
       //初始化
-      NSString *appKey = call.arguments[@"appKey"];
-      NSString *appSerect = call.arguments[@"appSecret"];
-      [[XMReqMgr sharedInstance] registerXMReqInfoWithKey:appKey appSecret:appSerect];
+      NSDictionary *arguments = call.arguments;
+      [[XMReqMgr sharedInstance] registerXMReqInfoWithKey:arguments[@"appKey"] appSecret:arguments[@"appSecret"]];
       [XMReqMgr sharedInstance].delegate = self;
       result(@1);
   }else if([@"getGuessLikeAlbum" isEqualToString:call.method]){
