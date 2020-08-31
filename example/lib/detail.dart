@@ -387,7 +387,7 @@ class _TrackDetailState extends State<TrackDetail> {
     final res = await _fluxmly.playNext();
     if (res == 1) {
       int indexPos =
-          (position + 1) > trackList.length ? position : position + 1;
+          (position + 1) >= trackList.length ? position : position + 1;
       //更新
       update(trackList, indexPos,true);
     }

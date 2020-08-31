@@ -69,7 +69,7 @@ public class FluxmlyPlugin implements MethodCallHandler {
     this.channel = channel;
     this.channel.setMethodCallHandler(this);
     this.registrar = registrar;
-    mPlayerManager =XmPlayerManager.getInstance(registrar.activeContext());
+    mPlayerManager =XmPlayerManager.getInstance(registrar.context());
   }
   
 
@@ -105,6 +105,9 @@ public class FluxmlyPlugin implements MethodCallHandler {
         getTracks(call,result);
         break;
       case "playTrack":
+        //初始化播放器
+        mPlayerManager.init();
+        mPlayerManager.setBreakpointResume(false);
         //播放器监听
         mPlayerManager.addPlayerStatusListener(mPlayerStatusListener);
         List trackList = call.argument("trackList");

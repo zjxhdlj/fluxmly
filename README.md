@@ -21,3 +21,14 @@ Android & IOS 通用
 
 
 其他功能暂无使用，故没有开发，不过都差不多，举一反三也能完成
+
+Android：
+
+需要在AndroidManifest.xml中添加，注册播放器
+<service android:name="com.ximalaya.ting.android.opensdk.player.service.XmPlayerService"
+            android:process=":player" />
+
+
+IOS：
+Build Settings 下 Other Linker Flags 中添加 -lXMOpenPlatform
+# Library Search Paths 中添加 $(PROJECT_DIR)/Frameworks
