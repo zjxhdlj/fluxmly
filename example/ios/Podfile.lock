@@ -1,6 +1,6 @@
 PODS:
   - Flutter (1.0.0)
-  - fluxmly (0.0.1):
+  - fluxmly (0.0.5):
     - Flutter
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  fluxmly: 0bb9c0a67c0a44880cfcc4ac7ea7f9915e384e63
+  fluxmly: 3a831d2b97899f09638556d80ac0a8b727802136
 
 PODFILE CHECKSUM: f32fb4e7c14f8b3ca19a369d7be425dd9241af27
 

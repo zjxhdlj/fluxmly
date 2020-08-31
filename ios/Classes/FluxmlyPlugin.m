@@ -292,6 +292,4 @@ __weak FluxmlyPlugin* __fluxmlyPlagin;
     NSLog(@"XMTrackPlayerDidPausePlayForBadNetwork:%@", @(_sdkPlayer.playerState));
 }
 
-
-
 @end

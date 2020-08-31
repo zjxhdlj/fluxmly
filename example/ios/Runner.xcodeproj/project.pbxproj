@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
-		75C695E0F5256B5C0B5B12A8 /* libPods-Runner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C358695B6FB232C38DB89862 /* libPods-Runner.a */; };
+		5676F1A624FC8B1300EBA480 /* libPods-Runner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5676F1A524FC8B1300EBA480 /* libPods-Runner.a */; };
+		56B6EB1824FBFAB000DAD45F /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA1B0B24F2390300B0EB93 /* libz.1.tbd */; };
+		56B6EB1924FBFAB000DAD45F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA1AC524F21F8100B0EB93 /* libz.tbd */; };
+		56B6EB1A24FBFAEA00DAD45F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA1AC324F21F4200B0EB93 /* CoreTelephony.framework */; };
+		56B6EB1B24FBFAEF00DAD45F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA1AC124F21F3500B0EB93 /* SystemConfiguration.framework */; };
 		978B8F6F1D3862AE00F588F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFD8EE1D35381100E5BB4D /* AppDelegate.m */; };
 		97C146F31CF9000F007C117D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C146F21CF9000F007C117D /* main.m */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
@@ -34,11 +38,11 @@
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		5676F1A524FC8B1300EBA480 /* libPods-Runner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-Runner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56CA1AC124F21F3500B0EB93 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		56CA1AC324F21F4200B0EB93 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		56CA1AC524F21F8100B0EB93 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		56CA1B0B24F2390300B0EB93 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
-		56CA1C3024F2503F00B0EB93 /* libXMOpenPlatform.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXMOpenPlatform.a; path = ../../ios/Frameworks/libXMOpenPlatform.a; sourceTree = "<group>"; };
 		5BD704DEF5EB1C9DA54DE91C /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		60780E71D8AD7633B7791873 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
@@ -52,7 +56,6 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C358695B6FB232C38DB89862 /* libPods-Runner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Runner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01D939A9CCBB1015D2DDBCA /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C695E0F5256B5C0B5B12A8 /* libPods-Runner.a in Frameworks */,
+				5676F1A624FC8B1300EBA480 /* libPods-Runner.a in Frameworks */,
+				56B6EB1B24FBFAEF00DAD45F /* SystemConfiguration.framework in Frameworks */,
+				56B6EB1A24FBFAEA00DAD45F /* CoreTelephony.framework in Frameworks */,
+				56B6EB1824FBFAB000DAD45F /* libz.1.tbd in Frameworks */,
+				56B6EB1924FBFAB000DAD45F /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,12 +88,11 @@
 		56CA1A4924F217CC00B0EB93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5676F1A524FC8B1300EBA480 /* libPods-Runner.a */,
 				56CA1B0B24F2390300B0EB93 /* libz.1.tbd */,
 				56CA1AC524F21F8100B0EB93 /* libz.tbd */,
 				56CA1AC324F21F4200B0EB93 /* CoreTelephony.framework */,
-				56CA1C3024F2503F00B0EB93 /* libXMOpenPlatform.a */,
 				56CA1AC124F21F3500B0EB93 /* SystemConfiguration.framework */,
-				C358695B6FB232C38DB89862 /* libPods-Runner.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -380,7 +386,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -394,7 +399,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -525,7 +529,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -539,7 +542,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -563,7 +565,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -577,7 +578,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

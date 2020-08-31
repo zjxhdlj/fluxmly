@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluxmly/fluxmly.dart';
-import 'package:fluxmly_example/home_page.dart';
-import 'package:fluxmly_example/routes.dart';
+import 'home_page.dart';
+import 'routes.dart';
 
 void main() {
   runApp(MyApp());

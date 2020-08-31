@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluxmly_example/detail.dart';
-import 'package:fluxmly_example/list.dart';
+import 'detail.dart';
+import 'list.dart';
 
 final routes = {
   "/detail": (context, {arguments}) => TrackDetail(
