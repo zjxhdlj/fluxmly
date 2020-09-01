@@ -25,11 +25,14 @@ import com.ximalaya.ting.android.opensdk.player.XmPlayerManager;
 import com.ximalaya.ting.android.opensdk.player.service.IXmPlayerStatusListener;
 import com.ximalaya.ting.android.opensdk.player.service.XmPlayListControl;
 import com.ximalaya.ting.android.opensdk.player.service.XmPlayerException;
+import com.google.gson.reflect.TypeToken;
+import com.ximalaya.ting.android.opensdk.httputil.BaseResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.lang.reflect.Type;
 
 import com.google.gson.Gson;
 
@@ -37,7 +40,7 @@ import com.google.gson.Gson;
 /** FluxmlyPlugin */
 public class FluxmlyPlugin implements MethodCallHandler {
 
-  
+
   private static final String TAG = "XMLY";
   /// The MethodChannel that will the communication between Flutter and native Android
   ///
@@ -50,7 +53,7 @@ public class FluxmlyPlugin implements MethodCallHandler {
   private XmPlayerManager mPlayerManager;
   private final MethodChannel channel;
 
-  
+
   // This static function is optional and equivalent to onAttachedToEngine. It supports the old
   // pre-Flutter-1.12 Android projects. You are encouraged to continue supporting
   // plugin registration via this function while apps migrate to use the new Android APIs
@@ -71,7 +74,7 @@ public class FluxmlyPlugin implements MethodCallHandler {
     this.registrar = registrar;
     mPlayerManager =XmPlayerManager.getInstance(registrar.context());
   }
-  
+
 
   @Override
   public void onMethodCall(final MethodCall call, final Result result) {
@@ -105,19 +108,33 @@ public class FluxmlyPlugin implements MethodCallHandler {
         getTracks(call,result);
         break;
       case "playTrack":
-        //初始化播放器
-        mPlayerManager.init();
-        mPlayerManager.setBreakpointResume(false);
         //播放器监听
         mPlayerManager.addPlayerStatusListener(mPlayerStatusListener);
         List trackList = call.argument("trackList");
         int index = call.argument("index");
-        mPlayerManager.setPlayList(mTrackHotList.getTracks(),index);
+
+        //转化成List<Track>
+        List<Track> tracks=new ArrayList<Track>();
+        try {
+          Type listType = (new TypeToken<Track>() {
+          }).getType();
+
+          for(Object trackModel:trackList){
+            String str = new Gson().toJson(trackModel);
+            Track track = (Track)BaseResponse.getResponseBodyStringToObject(listType, str);
+            tracks.add(track);
+          }
+        } catch (Exception e) {
+          //TODO: handle exception
+        }
+
+
+        mPlayerManager.setPlayList(tracks,index);
         break;
       case "pause":
-      mPlayerManager.pause();
-      result.success(1);
-      break;
+        mPlayerManager.pause();
+        result.success(1);
+        break;
       case "play":
         int playIndex = call.argument("index");
         if(playIndex >= 0){
@@ -126,38 +143,38 @@ public class FluxmlyPlugin implements MethodCallHandler {
           mPlayerManager.play();
         }
 
-      result.success(1);
-      break;
+        result.success(1);
+        break;
       case "stop":
         mPlayerManager.stop();
         result.success(1);
         break;
       case "playPre":
-      mPlayerManager.playPre();
+        mPlayerManager.playPre();
         result.success(1);
-      break;
+        break;
       case "playNext":
-      mPlayerManager.playNext();
+        mPlayerManager.playNext();
         result.success(1);
-      break;
+        break;
       case "getDuration":
-      result.success(""+mPlayerManager.getDuration());
-      break;
+        result.success(""+mPlayerManager.getDuration());
+        break;
       case "getPlayCurrPositon":
-      int res = mPlayerManager.getPlayCurrPositon();
-      Log.e(TAG,"音频当前:"+res);
-      result.success(""+res);
-      break;
+        int res = mPlayerManager.getPlayCurrPositon();
+        Log.e(TAG,"音频当前:"+res);
+        result.success(""+res);
+        break;
       case "seekTo":
-      int pos = call.argument("pos");
+        int pos = call.argument("pos");
 
-      mPlayerManager.seekTo(pos);
-      break;
+        mPlayerManager.seekTo(pos);
+        break;
       case "release":
-      if(mPlayerManager!=null){
-        mPlayerManager.removePlayerStatusListener(mPlayerStatusListener);
-      }
-      break;
+        if(mPlayerManager!=null){
+          mPlayerManager.removePlayerStatusListener(mPlayerStatusListener);
+        }
+        break;
       case "setPlayMode":
         if(mPlayerManager!=null){
           int playModeIndex = call.argument("playModeIndex");
@@ -239,8 +256,8 @@ public class FluxmlyPlugin implements MethodCallHandler {
 //          }
 
           mTrackHotList = trackList;
-           final String data=new Gson().toJson(mTrackHotList);
-           result.success(""+data);
+          final String data=new Gson().toJson(mTrackHotList);
+          result.success(""+data);
         }
       }
 
@@ -252,9 +269,9 @@ public class FluxmlyPlugin implements MethodCallHandler {
   }
 
   private static Map<String, Object> buildArguments(Object value) {
-      Map<String, Object> result = new HashMap<>();
-      result.put("value", value);
-      return result;
+    Map<String, Object> result = new HashMap<>();
+    result.put("value", value);
+    return result;
   }
 
   //====================== 播放器回调方法 开始===================
@@ -315,8 +332,8 @@ public class FluxmlyPlugin implements MethodCallHandler {
     private void updateButtonStatus() {}
 
     @Override
-      public void onSoundSwitch(PlayableModel laModel, PlayableModel curModel) {}
-  
+    public void onSoundSwitch(PlayableModel laModel, PlayableModel curModel) {}
+
     @Override
     public void onSoundPrepared() {
 
@@ -324,5 +341,5 @@ public class FluxmlyPlugin implements MethodCallHandler {
   };
   //====================== 播放器回调方法 结束===================
 
-  
+
 }
