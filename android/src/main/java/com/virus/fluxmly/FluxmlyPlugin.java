@@ -49,7 +49,6 @@ public class FluxmlyPlugin implements MethodCallHandler {
 //  private EventChannel.EventSink eventSink = null;
   private static Registrar registrar;
   private CommonRequest mXimalaya=null;
-  private TrackList mTrackHotList;
   private XmPlayerManager mPlayerManager;
   private final MethodChannel channel;
 
@@ -250,15 +249,10 @@ public class FluxmlyPlugin implements MethodCallHandler {
     CommonRequest.getTracks(map,new IDataCallBack<TrackList>(){
       @Override
       public void onSuccess(TrackList trackList) {
-        if (trackList != null && trackList.getTracks() != null && trackList.getTracks().size() != 0) {
-//          if(mTrackHotList!=null){
-//            trackList.getTracks().addAll(0 ,mTrackHotList.getTracks());
-//          }
 
-          mTrackHotList = trackList;
-          final String data=new Gson().toJson(mTrackHotList);
-          result.success(""+data);
-        }
+        final String data=new Gson().toJson(trackList);
+
+        result.success(""+data);
       }
 
       @Override
